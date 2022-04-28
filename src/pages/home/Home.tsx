@@ -1,10 +1,8 @@
 import "./home.scss";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Widget, { WidgetOptions } from "../../components/widgets/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
-import ListTable from "../../components/table/Table";
+import ListTable from "../../components/table/ListTable";
 const Home = () => {
   return (
     <div className="home">
@@ -17,7 +15,7 @@ const Home = () => {
         </div>
         <div className="charts">
           <Featured />
-          <Chart />
+          <Chart aspect={3/1} title={'Last 6 months (Revenue)'}/>
         </div>
         <div className="listContainer">
           <div className="listTitle">

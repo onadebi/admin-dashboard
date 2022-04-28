@@ -1,8 +1,13 @@
+import Datatable from '../../components/datatable/Datatable'
 import './list.scss'
 
 const List = () => {
   return (
-    <div>List</div>
+    <div className='list'>
+      <div className="listContainer">
+        <Datatable/>
+      </div>
+    </div>
   )
 }
 

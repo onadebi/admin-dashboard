@@ -9,6 +9,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+interface IProps{
+  aspect: number;
+  title: string;
+}
+
 const data = [
   { name: "January", Total: 1200 },
   { name: "February", Total: 2100 },
@@ -18,11 +23,11 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-const Chart = () => {
+const Chart: React.FC<IProps> = ({aspect = 2/1, title =''}) => {
   return (
     <div className="chart">
-      <div className="title">Last 6 months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
         <AreaChart
           className="area-chart-wrapper"
           width={730}
