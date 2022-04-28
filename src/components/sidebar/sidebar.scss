@@ -94,7 +94,12 @@
     }
 
 
-
+ /**---Media responsiveness ---**/
+ @media (width < 700px) {
+    .sidebar{
+        flex:1;
+    }
+ }
 
 
 

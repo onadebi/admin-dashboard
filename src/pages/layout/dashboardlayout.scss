@@ -1,0 +1,15 @@
+.dashboardLayout {
+  display: flex;
+
+  .layoutContainer {
+    flex: 6;
+  }
+  
+  /**---Media responsiveness ---**/
+  @media (width < 700px) {
+    .homeContainer {
+      // width: 100%;
+      flex: 1;
+    }
+  }
+}
