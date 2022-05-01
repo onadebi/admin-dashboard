@@ -1,0 +1,94 @@
+$textColor: rgb(228, 228, 228);
+$textColorWithTransparency: rgba(228, 228, 228, 0.219);
+$textgray: #333;
+$bgColorDark: #000;
+
+.app.dark {
+  background-color: $bgColorDark;
+  color: rgb(156, 156, 156);
+
+  .chartGrid {
+    stroke: $textColorWithTransparency !important;
+  }
+
+  .table {
+    background-color: $bgColorDark;
+    border: 1px solid $textColorWithTransparency;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .tblHeadRow {
+      background-color: $bgColorDark;
+      color: $textColorWithTransparency;
+    }
+
+    .tableCell {
+      color: $textColor;
+    }
+  }
+
+  .sidebar {
+    background-color: inherit !important;
+    border-color: $textColor;
+
+    .top {
+      background-color: inherit !important;
+      .logo {
+        color: #999;
+      }
+    }
+
+    hr {
+      border-color: $textColor;
+    }
+
+    ul {
+      li {
+        &:hover {
+          background-color: $textgray;
+
+          .icon {
+            color: $textColor;
+          }
+        }
+
+        .icon {
+          color: $textgray;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    border-color: $textColor;
+    .search {
+      input {
+        color: $textColor;
+      }
+    }
+  }
+
+  .datatable {
+    .datagrid {
+      color: $textColor;
+      // border-top:1px solid yellow;
+      //   border: none;
+
+      .viewButton {
+        color: rgba(0, 0, 139, 0.7);
+      }
+      .deleteButton {
+        color: rgba(255, 0, 0, 0.7);
+      }
+    }
+  }
+
+  form {
+    .formInput {
+      input {
+        background-color: transparent;
+        color: $textColor;
+      }
+    }
+  }
+}

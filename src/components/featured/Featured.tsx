@@ -4,6 +4,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { NumberCommaFormat } from "../../config/utils";
 
 const Featured = () => {
   return (
@@ -17,7 +18,7 @@ const Featured = () => {
           <CircularProgressbar value={70} text={"70%"} strokeWidth={5} />
         </div>
         <p className="title">Total sales made today</p>
-        <p className="amount">$420</p>
+        <p className="amount">{`₦ ${NumberCommaFormat(4200.46)}`}</p>
         <p className="desc">
           Previos transactions processing. Last payments may be included
         </p>

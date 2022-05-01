@@ -41,7 +41,7 @@ export const userColumns = [
 //temporary data
 export const userRows = [
   {
-    id: 1,
+    id: 31,
     username: "Snow",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     status: "active",

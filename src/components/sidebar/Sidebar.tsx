@@ -12,12 +12,22 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { EnumThemeOptions, toggleTheme } from "../../store/slices/theme.slice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
+  const HandleThemeChange = (theme: EnumThemeOptions) => {
+    dispatch(toggleTheme(theme));
+  };
+
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">OnaxDev</span>
+        <NavLink to={"/"} style={{ textDecoration: "none" }}>
+          <span className="logo">OnaxDashboard</span>
+        </NavLink>
       </div>
       <hr />
       <div className="center">
@@ -36,10 +46,12 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </NavLink>
-          <li>
-            <StoreIcon className="icon" />
-            <span>Products</span>
-          </li>
+          <NavLink to="/products">
+            <li>
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </NavLink>
           <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
@@ -82,8 +94,14 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div
+          className="colorOption" title="Toggle light theme"
+          onClick={() => HandleThemeChange(EnumThemeOptions.LIGHT)}
+        ></div>
+        <div
+          className="colorOption" title="Toggle to dark theme"
+          onClick={() => HandleThemeChange(EnumThemeOptions.DARK)}
+        ></div>
       </div>
     </div>
   );

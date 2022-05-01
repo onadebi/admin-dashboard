@@ -5,6 +5,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import { NumberCommaFormat } from "../../config/utils";
 
 export enum WidgetOptions {
   USER = "USER",
@@ -39,7 +40,7 @@ const dataInitValues: IData = {
     ),
   };
 
-  const amount = 150;
+  const amount = 15000;
   const diffPercentage = 20;
 const Widget: React.FC<IWidgetType> = ({ type = WidgetOptions.USER }) => {
   let data: IData = dataInitValues;
@@ -112,7 +113,7 @@ const Widget: React.FC<IWidgetType> = ({ type = WidgetOptions.USER }) => {
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="counter">{data.isMoney && "$"} {amount}</span>
+        <span className="counter">{data.isMoney && "₦"} {NumberCommaFormat(amount)}</span>
         <span className="link">{data.link}</span>
       </div>
       <div className="right">

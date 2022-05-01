@@ -39,20 +39,19 @@
                 margin-bottom: 5px;
             }
 
-            li a, a{
+            li a,a{
                 text-decoration: none;
                 display: flex;
                 align-items: center;
-                &:hover{
-                    background-color: #ece8ff;
-                }
+                width: 100%;
             }
-
+            
             li{
                 display:flex;
                 align-items: center;
                 padding:5px;
                 cursor: pointer;
+                width: inherit !important;
 
                 &:hover{
                     background-color: #ece8ff;
@@ -61,6 +60,7 @@
                 .icon{
                     font-size: 18px;
                     color:#7451f8;
+                    padding: 0px 5px 0px 0px;
                 }
 
                 span{
